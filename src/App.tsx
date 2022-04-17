@@ -1,10 +1,17 @@
-import React from 'react';
-import Homepages from './components/homepage/Homepages';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import ShopItem from "./components/ShopItem/Shop-item";
+import Homepages from "./pages/homePages/homepage";
+
 
 function App() {
+ 
   return (
     <div className="App">
-<Homepages />
+      <Routes>
+        <Route path="/" element={<Homepages />}></Route>
+        <Route path="/shop" element={<ShopItem />}></Route>
+      </Routes>
     </div>
   );
 }
